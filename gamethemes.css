@@ -1,257 +1,385 @@
-.master_68767 {
-
-
-
-
---background_image: url('https://ptpimg.me/a45526.jpg');
-
-
---content: rgba(17, 29, 50, .46);
-
-
---elements: #27222200;
-
-
---bars: rgba(17, 29, 50, .7);
-
-
---header_color: #061523a8;
-
-
---shadow: -3px 3px 5px #3785c0;
-
-
---roundedness: 10px;
-
-
---text_color: #bde5fe;
-
-
---nav_color: #6a81b2;
-
-
---nav_hover: #6a93c7
+/* 全局重置样式 */
+* {
+    padding: 0em;
+    margin: 0em;
 }
 
-
-
-.master_68767 .edition_info {
-background-color: #395e7f59 !important;
+html {
+    width: 100%;
+    height: 100%;
 }
 
-
-.master_68767 textarea#quickpost {
-background: #1d3f569e;
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #0E1720;
+    font-family: tahoma, helvetica, sans-serif;
+    font-size: 8pt;
+    color: #e1ecf1;
+    min-width: 850px;
 }
 
-
-
-@font-face {
-font-family: "signalis";
-src: url("");
+/* 主题变量定义 */
+.master_74483 {
+    --background_image: url('https://ptpimg.me/a45526.jpg');
+    --content: rgba(17, 29, 50, .46);
+    --elements: #27222200;
+    --bars: rgba(17, 29, 50, .7);
+    --header_color: #061523a8;
+    --shadow: -3px 3px 5px #3785c0;
+    --roundedness: 10px;
+    --text_color: #bde5fe;
+    --nav_color: #6a81b2;
+    --nav_hover: #6a93c7;
 }
 
-
-
-
-.master_68767 #menu ul a {
-color: var(--nav_color) !important;
-padding: 5px 11px;
-margin: 0 86px;
-/*HERE*/
-margin-left: -70px;
-font-size: 28px;
-/*HERE*/
+/* 通用链接样式 */
+a {
+    color: #7FB7D3;
+    text-decoration: none;
+    border-bottom: dotted 1px #888;
 }
 
-.master_68767 #userinfo #userinfo_username .donateico {
-
-margin-top: 28px;
-margin-left: 110px;
-display: inline-block;
-font-size: 13px;
-/*HERE*/
+a:hover {
+    color: #a1d6f1;
+    border-bottom: dotted 1px #CCC;
+    position: relative;
+    top: 1px;
+    left: 1px;
 }
 
-
-
-
-
-
-
-
-.master_68767 ul#userinfo_username a {
-color: var(--text_color);
+a:active {
+    color: #FFFFFF;
+    border-bottom: solid 1px #CCC;
 }
 
-
-
-body.master_68767 {
-background-image: var(--background_image);
-margin-top: -50px;
+/* 通用表格样式 */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #576603;
 }
 
-.master_68767 #logo {
-background-image: url("https://ptpimg.me/im11ta.png");
-background-color: rgba(17, 29, 50, .46);
-background-repeat: no-repeat;
-background-position: center center;
-background-position-x: 660px;
-background-position-y: 50px;
-margin-top: 0px;
-border-bottom: none;
+td {
+    border: 1px solid #576603;
+    padding: 5px;
+    text-align: left;
 }
 
-.master_68767 input#submit_button,
-.master_68767 input {
-background: #49777c;
-border-radius: 50px 50px 50px 50px;
+tr {
+    background-color: #f2ffaa;
+    color: #333;
 }
 
-.master_68767 #userinfo {
-background: var(--bars);
-border-bottom: rgba(0, 0, 0, 0);
+tr:hover {
+    color: black;
+    background-color: #FAFFDB;
 }
 
-.master_68767 #userinfo_minor li a {
-color: var(--text_color);
+/* 通用标题样式 */
+h2 {
+    height: 48px;
+    line-height: 48px;
+    color: #BCDFEF;
+    padding-left: 15px;
+    border-bottom: solid 2px #314f6d;
 }
 
-.master_68767 #searchbars ul li input {
-background-color: #49777c !important;
-font-size: 1em;
+h2 a {
+    border-bottom: hidden;
 }
 
-.master_68767 #menu {
-font-family: signalis;
-font-size: 2.1em;
-font-weight: normal;
-background: var(--bars);
-box-shadow: 0 5px 14px -2px #0000;
-border-radius: 0 0 0px 0px;
+h2 a:hover {
+    position: relative;
+    top: 0;
+    left: 0;
 }
 
-.master_68767 #menu ul a:hover {
-color: var(--nav_hover) !important;
+/* 通用容器样式 */
+#wrapper {
+    position: relative;
+    padding-bottom: 300px;
+    height: auto !important;
+    min-height: 100%;
+    height: 100%;
 }
 
-.master_68767 #menu ul {
-max-width: 1100px;
-margin-top: -1px;
+#content {
+    width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
 }
 
-.master_68767 #userinfo #userinfo_username .donateico a {
-
-font-family: signalis;
-color: var(--nav_color);
-font-size: 2.1em;
-position: relative;
-top: 4px;
-margin-left: -35px;
+.thin {
+    width: 1000px;
+    margin: 0 auto;
 }
 
-.master_68767 #userinfo #userinfo_username .donateico a:hover {
-color: var(--nav_hover);
+/* 通用错误和成功消息样式 */
+.error_message {
+    border: 1px solid #C92020;
+    background-color: #EDC2DB;
+    color: #C92020;
+    padding: 3px 0;
+    text-align: center;
+    font-weight: 700;
 }
 
-.master_68767 #content {
-background: var(--content);
-box-shadow: none;
+.save_message {
+    background-color: #BDF09C;
+    border: 1px solid #228A0F;
+    color: #104007;
+    font-weight: 700;
+    padding: 3px 0;
+    text-align: center;
 }
 
-.master_68767 #content {
-margin-top: 250px;
+/* 通用隐藏类 */
+.hidden, .hide {
+    display: none;
 }
 
-.master_68767 #sidebar_group_info,
-.master_68767 #box_user_rating,
-.master_68767 #group_nofo_bigdiv,
-.master_68767 #collages,
-.master_68767 #grouplinks,
-.master_68767 #table,
-.master_68767 #torrent_coments,
-.master_68767 .box_user_rating,
-.master_68767 .box_game_ratings,
-.master_68767 .box_weblinks,
-.master_68767 .box_freeleech,
-.master_68767 .box_tags,
-.master_68767 .box_torrent_checking,
-.master_68767 .userreviews_div,
-.master_68767 .screenshots_div,
-.master_68767 .trailer_div,
-.master_68767 .vote_matches_div,
-.master_68767 .similar_div,
-.master_68767 .edition_info,
-.master_68767 .torrent_table {
-background: var(--elements);
-border-radius: var(--roundedness);
+.nobr {
+    white-space: nowrap;
 }
 
-.master_68767 h2#display_name {
-background: var(--header_color);
-box-shadow: var(--shadow);
-border-radius: var(--roundedness);
-border-bottom: rgba(0, 0, 0, 0);
-padding: 4px;
+/* 通用标签样式 */
+.label {
+    width: 15%;
+    background-color: #D7E971;
+    padding-right: 5px;
+    color: black;
 }
 
-.master_68767 span#groupplatform {
-margin-left: 10px;
+/* 通用按钮和输入框样式 */
+input, button {
+    background: #49777c;
+    border-radius: 50px 50px 50px 50px;
+    color: #CEF6FF;
+    border-style: hidden;
+    border-width: 0;
+    padding-left: 7px;
+    padding-right: 7px;
 }
 
-.master_68767 div#group_cover.box.box_albumart {
-border-radius: var(--roundedness);
-}
-
-.master_68767 .colhead_dark,
-.master_68767 .colhead,
-.master_68767 .head {
-background: var(--header_color);
-box-shadow: var(--shadow);
-border-radius: var(--roundedness);
-}
-
-.master_68767 * {
-color: var(--text_color);
-}
-
-.master_68767 blockquote,
-.master_68767 pre {
-background-color: var(--header_color);
-}
-
-.master_68767 div#header {
-position: relative;
-height: 50px;
-}
-
-.master_68767 div#searchbars {
-position: relative;
-top: -225px;
-}
-
-.master_68767 .avatar * {
-background: rgba(0, 0, 0, 0) !important;
-}
-
-.master_68767 div#footer * {
-background: rgba(0, 0, 0, 0) !important;
-}
-
-.master_68767 .colhead_dark {
-background: var(--header_color);
-position: relative;
-box-shadow: var(--shadow);
-border-radius: var(--roundedness);
-}
-
-
-
-.master_68767 div#torrent_comments * {
-
-background-image: none !important;
-}
-
-.master_68767 colgroup {
-background: var(--elements);
-}
+/* 主题特定样式 */
+.master_74483 .edition_info {
+    background-color: #395e7f59 !important;
+    }
+    
+    
+    .master_74483 textarea#quickpost {
+    background: #1d3f569e;
+    }
+    
+    
+    
+    @font-face {
+    font-family: "signalis";
+    src: url("");
+    }
+    
+    
+    
+    
+    .master_74483 #menu ul a {
+    color: var(--nav_color) !important;
+    padding: 5px 11px;
+    margin: 0 86px;
+    /*HERE*/
+    margin-left: -70px;
+    font-size: 28px;
+    /*HERE*/
+    }
+    
+    .master_74483 #userinfo #userinfo_username .donateico {
+    
+    margin-top: 28px;
+    margin-left: 110px;
+    display: inline-block;
+    font-size: 13px;
+    /*HERE*/
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    .master_74483 ul#userinfo_username a {
+    color: var(--text_color);
+    }
+    
+    
+    
+    body.master_74483 {
+    background-image: var(--background_image);
+    margin-top: -50px;
+    }
+    
+    .master_74483 #logo {
+    background-image: url("https://ptpimg.me/im11ta.png");
+    background-color: rgba(17, 29, 50, .46);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-position-x: 660px;
+    background-position-y: 50px;
+    margin-top: 0px;
+    border-bottom: none;
+    }
+    
+    .master_74483 input#submit_button,
+    .master_74483 input {
+    background: #49777c;
+    border-radius: 50px 50px 50px 50px;
+    }
+    
+    .master_74483 #userinfo {
+    background: var(--bars);
+    border-bottom: rgba(0, 0, 0, 0);
+    }
+    
+    .master_74483 #userinfo_minor li a {
+    color: var(--text_color);
+    }
+    
+    .master_74483 #searchbars ul li input {
+    background-color: #49777c !important;
+    font-size: 1em;
+    }
+    
+    .master_74483 #menu {
+    font-family: signalis;
+    font-size: 2.1em;
+    font-weight: normal;
+    background: var(--bars);
+    box-shadow: 0 5px 14px -2px #0000;
+    border-radius: 0 0 0px 0px;
+    }
+    
+    .master_74483 #menu ul a:hover {
+    color: var(--nav_hover) !important;
+    }
+    
+    .master_74483 #menu ul {
+    max-width: 1100px;
+    margin-top: -1px;
+    }
+    
+    .master_74483 #userinfo #userinfo_username .donateico a {
+    
+    font-family: signalis;
+    color: var(--nav_color);
+    font-size: 2.1em;
+    position: relative;
+    top: 4px;
+    margin-left: -35px;
+    }
+    
+    .master_74483 #userinfo #userinfo_username .donateico a:hover {
+    color: var(--nav_hover);
+    }
+    
+    .master_74483 #content {
+    background: var(--content);
+    box-shadow: none;
+    }
+    
+    .master_74483 #content {
+    margin-top: 250px;
+    }
+    
+    .master_74483 #sidebar_group_info,
+    .master_74483 #box_user_rating,
+    .master_74483 #group_nofo_bigdiv,
+    .master_74483 #collages,
+    .master_74483 #grouplinks,
+    .master_74483 #table,
+    .master_74483 #torrent_coments,
+    .master_74483 .box_user_rating,
+    .master_74483 .box_game_ratings,
+    .master_74483 .box_weblinks,
+    .master_74483 .box_freeleech,
+    .master_74483 .box_tags,
+    .master_74483 .box_torrent_checking,
+    .master_74483 .userreviews_div,
+    .master_74483 .screenshots_div,
+    .master_74483 .trailer_div,
+    .master_74483 .vote_matches_div,
+    .master_74483 .similar_div,
+    .master_74483 .edition_info,
+    .master_74483 .torrent_table {
+    background: var(--elements);
+    border-radius: var(--roundedness);
+    }
+    
+    .master_74483 h2#display_name {
+    background: var(--header_color);
+    box-shadow: var(--shadow);
+    border-radius: var(--roundedness);
+    border-bottom: rgba(0, 0, 0, 0);
+    padding: 4px;
+    }
+    
+    .master_74483 span#groupplatform {
+    margin-left: 10px;
+    }
+    
+    .master_74483 div#group_cover.box.box_albumart {
+    border-radius: var(--roundedness);
+    }
+    
+    .master_74483 .colhead_dark,
+    .master_74483 .colhead,
+    .master_74483 .head {
+    background: var(--header_color);
+    box-shadow: var(--shadow);
+    border-radius: var(--roundedness);
+    }
+    
+    .master_74483 * {
+    color: var(--text_color);
+    }
+    
+    .master_74483 blockquote,
+    .master_74483 pre {
+    background-color: var(--header_color);
+    }
+    
+    .master_74483 div#header {
+    position: relative;
+    height: 50px;
+    }
+    
+    .master_74483 div#searchbars {
+    position: relative;
+    top: -225px;
+    }
+    
+    .master_74483 .avatar * {
+    background: rgba(0, 0, 0, 0) !important;
+    }
+    
+    .master_74483 div#footer * {
+    background: rgba(0, 0, 0, 0) !important;
+    }
+    
+    .master_74483 .colhead_dark {
+    background: var(--header_color);
+    position: relative;
+    box-shadow: var(--shadow);
+    border-radius: var(--roundedness);
+    }
+    
+    
+    
+    .master_74483 div#torrent_comments * {
+    
+    background-image: none !important;
+    }
+    
+    .master_74483 colgroup {
+    background: var(--elements);
+    }
